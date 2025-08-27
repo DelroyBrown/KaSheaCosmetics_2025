@@ -20,6 +20,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "KaSheaCosmetics_home",
+    "KaSheaCosmetics_catalog",
 ]
 
 MIDDLEWARE = [

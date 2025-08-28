@@ -8,7 +8,7 @@ app_name = "KaSheaCosmetics_base"
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("KaSheaCosmetics_home.urls")),
-    path("catalog/", include(("catalog.urls", "catalog"), namespace="catalog")),
+    path("", include(("KaSheaCosmetics_catalog.urls", "catalog"), namespace="catalog")),
 ]
 
 if settings.DEBUG:

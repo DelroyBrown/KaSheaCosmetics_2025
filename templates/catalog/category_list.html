@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Shop Categories • Ka'Shea Cosmetics{% endblock %}
+{% block content %}
+<h1 class="h3 mb-4">Shop by Category</h1>
+<div class="row row-cols-1 row-cols-md-3 g-3">
+    {% for cat in categories %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h5"><a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a></h2>
+                <p class="text-muted small mb-0">{{ cat.description|truncatechars:120 }}</p>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No categories yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -3,30 +3,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Ka'Shea Cosmetics{% endblock %}</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="{% static 'vendors/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-
     {% block meta %}{% endblock %}
     {% block head %}{% endblock %}
 </head>
 
 <body>
     {% include "partials/navbar.html" %}
-    <main class="container py-4">
-        {% if messages %}
-        <div class="mb-3">
-            {% for message in messages %}
-            <div class="alert alert-{{ message.tags|default:'info' }} mb-2">{{ message }}</div>
-            {% endfor %}
-        </div>
-        {% endif %}
-        {% block content %}
-        {% endblock %}
+
+    {# Full-width sections live here #}
+    {% block fullbleed %}{% endblock %}
+
+    {# Regular content stays constrained #}
+    <main class="container">
+        {% block content %}{% endblock %}
     </main>
+
     {% include "partials/footer.html" %}
 
     <script src="{% static 'vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>

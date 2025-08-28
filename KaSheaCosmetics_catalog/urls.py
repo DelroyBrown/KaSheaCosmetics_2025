@@ -6,4 +6,6 @@ app_name = "KaSheaCosmetics_catalog"
 urlpatterns = [
     path("c/<slug:slug>/", views.CategoryDetailView.as_view(), name="category_detail"),
     path("p/<slug:slug>/", views.ProductDetailView.as_view(), name="product_detail"),
+    path("shop/", views.CategoryListView.as_view(), name="category_list")
+
 ]

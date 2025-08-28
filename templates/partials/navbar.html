@@ -1,18 +1,72 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container">
-        <a class="navbar-brand" href="/"><strong>Ka'Shea</strong> Cosmetics</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="nav" class="collapse navbar-collapse">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-            </ul>
-            <div class="d-flex gap-2">
-                <a class="btn btn-outline-secondary" href="#">Account</a>
-                <a class="btn btn-brand" href="#">Cart</a>
-            </div>
-        </div>
+{% load static %}
+
+<!-- Brand font -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg bg-light py-4 border-bottom border-dark">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="#" style="font-family:'Great Vibes',cursive; font-size:2.5rem; line-height:1;">
+      Ka'Shea
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+            aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible area -->
+    <div class="collapse navbar-collapse" id="navbarMain">
+
+      <!-- Center menu -->
+      <ul class="navbar-nav mx-lg-auto my-2 my-lg-0 gap-lg-4">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Homepage 1</a></li>
+            <li><a class="dropdown-item" href="#">Homepage 2</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shop</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Products</a></li>
+            <li><a class="dropdown-item" href="#">Categories</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Blog</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Latest Posts</a></li>
+            <li><a class="dropdown-item" href="#">Categories</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="#">FAQ</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+
+      <!-- Right utilities -->
+      <div class="d-flex align-items-center gap-3 ms-lg-3">
+        <a class="nav-link p-0" href="#">Wishlist (0)</a>
+        <a class="nav-link p-0" href="#">Cart (0)</a>
+        <a class="nav-link p-0" href="#" aria-label="Search"><i class="bi bi-search"></i></a>
+      </div>
     </div>
+  </div>
 </nav>
+
+<!-- Bootstrap Icons for the search icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">

@@ -6,6 +6,10 @@ body {
     font-family: "Marcellus", serif !important;
 }
 
+.letter-spaced {
+    letter-spacing: 1.5px;
+}
+
 /* TESTIMONIALS */
 
 

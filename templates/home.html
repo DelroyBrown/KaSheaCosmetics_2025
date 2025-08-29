@@ -17,43 +17,47 @@
 
     <div class="row g-4 justify-content-center mx-0 pb-5 px-3 px-sm-4">
       <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm border-0">
-          <img src="{% static 'img/banner-image-1.jpg' %}" class="rounded-0 card-img-top" alt="Soft leather jackets">
+        <div class="card bg-light h-100 border-0">
+          <img src="{% static 'img/product-images/zennight.png' %}" class="rounded-0 card-img-top"
+            alt="Soft leather jackets">
           <div class="card-body text-center">
-            <h5 class="card-title text-uppercase">Whipped Body Butters</h5>
-            <p class="card-text">Scelerisque duis aliquam…</p>
+            <h5 class="card-title text-uppercase">Body Scrubs</h5>
+            <p class="card-text">Exfoliate, refresh, awaken your glow</p>
             <a href="#" class="rounded-0 btn btn-outline-dark text-uppercase">Discover Now</a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 mx-5 col-lg-3">
-        <div class="card h-100 shadow-sm border-0">
-          <img src="{% static 'img/banner-image-2.jpg' %}" class="rounded-0 card-img-top" alt="Soft leather jackets">
+      <div class="col-sm-6 col-md-4 col-lg-3 mx-5">
+        <div class="card bg-light h-100 border-0">
+          <img src="{% static 'img/product-images/musclesooth.png' %}" class="rounded-0 card-img-top"
+            alt="Soft leather jackets">
           <div class="card-body text-center">
-            <h5 class="card-title text-uppercase">Body Scrubs</h5>
-            <p class="card-text">Scelerisque duis aliquam…</p>
+            <h5 class="card-title text-uppercase">Bath Salts</h5>
+            <p class="card-text">Soothe muscles, restore inner calm</p>
             <a href="#" class="rounded-0 btn btn-outline-dark text-uppercase">Discover Now</a>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm border-0">
-          <img src="{% static 'img/banner-image-3.jpg' %}" class="rounded-0 card-img-top" alt="Soft leather jackets">
+        <div class="card bg-light h-100 border-0">
+          <img src="{% static 'img/product-images/sweetstuff.png' %}" class="rounded-0 card-img-top"
+            alt="Soft leather jackets">
           <div class="card-body text-center">
-            <h5 class="card-title text-uppercase">Bath Salts</h5>
-            <p class="card-text">Scelerisque duis aliquam…</p>
+            <h5 class="card-title text-uppercase">Whipped Body Butters</h5>
+            <p class="card-text">Velvety nourishment for radiant skin</p>
             <a href="#" class="rounded-0 btn btn-outline-dark text-uppercase">Discover Now</a>
           </div>
         </div>
       </div>
+
+
       <!-- repeat other cards -->
     </div>
   </div>
 </section>
 
-
 <!-- WHAT WE DO SECTION -->
-<section class="features mt-5 py-5">
+<section class="features px-4 px-sm-0 mt-5 py-5">
   <div class="container">
     <div class="row g-4 text-center">
 
@@ -99,6 +103,264 @@
   </div>
 </section>
 -
+<!-- FEATURED PRODUCTS -->
+<section class="bg-light py-5 position-relative overflow-hidden">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3 gap-2">
+      <h4 class="text-uppercase mb-0">Best Selling Items</h4>
+      <a href="javascript:void(0)" class="rounded-0 btn btn-outline-dark text-uppercase">
+        View All Products
+      </a>
+    </div>
+
+    <div class="row g-4">
+      <!-- Product -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="h-100">
+          <div class="position-relative">
+            <a href="javascript:void(0)" class="d-block ratio ratio-1x1">
+              <img src="{% static 'img/product-images/citrusnotes.png' %}" class="img-fluid w-100 h-100 object-fit-cover"
+                alt="Dark florish onepiece">
+            </a>
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2" aria-label="Add to wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
+          <div class="pt-3">
+            <h5 class="text-uppercase fs-6 mb-1">
+              <a href="product-1.html" class="link-dark text-decoration-none">Dark florish onepiece</a>
+            </h5>
+            <span class="text-body-secondary">$95.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="h-100">
+          <div class="position-relative">
+            <a href="javascript:void(0)" class="d-block ratio ratio-1x1">
+              <img src="{% static 'img/product-images/awakenbathsalts.png' %}" class="img-fluid w-100 h-100 object-fit-cover"
+                alt="Baggy Shirt">
+            </a>
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2" aria-label="Add to wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
+          <div class="pt-3">
+            <h5 class="text-uppercase fs-6 mb-1">
+              <a href="product-2.html" class="link-dark text-decoration-none">Baggy Shirt</a>
+            </h5>
+            <span class="text-body-secondary">$55.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="h-100">
+          <div class="position-relative">
+            <a href="javascript:void(0)" class="d-block ratio ratio-1x1">
+              <img src="{% static 'img/product-images/unwind.png' %}" class="img-fluid w-100 h-100 object-fit-cover"
+                alt="Cotton off-white shirt">
+            </a>
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2" aria-label="Add to wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
+          <div class="pt-3">
+            <h5 class="text-uppercase fs-6 mb-1">
+              <a href="product-3.html" class="link-dark text-decoration-none">Cotton off-white shirt</a>
+            </h5>
+            <span class="text-body-secondary">$65.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="h-100">
+          <div class="position-relative">
+            <a href="javascript:void(0)" class="d-block ratio ratio-1x1">
+              <img src="{% static 'img/product-images/naked.png' %}" class="img-fluid w-100 h-100 object-fit-cover"
+                alt="Handmade crop sweater">
+            </a>
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2" aria-label="Add to wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
+          <div class="pt-3">
+            <h5 class="text-uppercase fs-6 mb-1">
+              <a href="product-4.html" class="link-dark text-decoration-none">Handmade crop sweater</a>
+            </h5>
+            <span class="text-body-secondary">$50.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="collection py-5">
+  <div class="container">
+    <div class="row g-0 align-items-stretch">
+      <!-- Image -->
+      <div class="col-md-6">
+        <div class="h-100">
+          <img src="{% static 'img/product-images/awaken.png' %}" alt="Awaken Body Scrub"
+            class="img-fluid w-100 h-100 object-fit-cover rounded-start">
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="col-md-6 bg-light d-flex">
+        <div class="p-5 my-auto">
+          <h3 class="text-uppercase display-5 marcellus-font fw-light mb-3">Classic Winter Collection</h3>
+          <p class="mb-4">
+            Dignissim lacus, turpis ut suspendisse vel tellus. Turpis purus, gravida orci, fringilla a.
+            Ac sed eu fringilla odio mi. Consequat pharetra at magna imperdiet cursus ac faucibus sit libero.
+            Ultricies quam nunc, lorem sit lorem urna, pretium aliquam ut. In vel, quis donec dolor id in.
+          </p>
+          <a href="#" class="rounded-0 btn btn-dark text-uppercase">Shop Collection</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials py-5 bg-light">
+  <div class="container">
+    <div class="text-center mt-5">
+      <h3 class="fw-bold display-3 marcellus-font section-title text-uppercase">We Love A Good Compliment</h3>
+    </div>
+
+    <div class="swiper testimonial-swiper my-5">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item text-center">
+            <blockquote>
+              <p>“So soft on my skin, cleared up all of my rashes!”</p>
+              <div class="review-title text-uppercase">Lucy Benningham</div>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-item text-center">
+            <blockquote>
+              <p>“Citrus Notes is my favorite, it smells so good.”</p>
+              <div class="review-title text-uppercase">John Backhead</div>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-item text-center">
+            <blockquote>
+              <p>I really like the bath salts, they leave me feeling smooth.”</p>
+              <div class="review-title text-uppercase">Lisa Simpson</div>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-item text-center">
+            <blockquote>
+              <p>The Body Scrubs have worked miracles on my fantastically dry heels.”</p>
+              <div class="review-title text-uppercase">Samuel Crisp</div>
+            </blockquote>
+          </div>
+        </div>
+
+      </div>
+      <div class="testimonial-swiper-pagination d-flex justify-content-center mt-4"></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter py-6 my-5 position-relative">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <div class="text-center mb-4">
+          <h2 class="newsletter-title text-uppercase mb-0 fw-light display-5 marcellus-font">Sign Up for Our Newsletter</h2>
+        </div>
+
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" name="email" class="form-control form-control-lg mb-2 rounded-0 shadow-sm"
+                 placeholder="Your Email Address" required>
+          <button type="submit" class="btn btn-dark w-100 text-uppercase rounded-0 py-3">
+            Sign Up
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script src="{% static 'javascript/swiper-bundle.min.js' %}"></script>
+
+<script>
+  (function () {
+    const SELECTOR = '.testimonial-swiper';
+    const el = document.querySelector(SELECTOR);
+    if (!el) return; // exit if the slider isn't on this page
+
+    const slidesCount = el.querySelectorAll('.swiper-slide').length;
+    const prefersNoMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Base params (kept modest to prevent overflow on large type)
+    const params = {
+      grabCursor: true,
+      centeredSlides: true,
+      centeredSlidesBounds: true,      // keep active fully visible
+      slidesPerView: 1.15,             // small peek of neighbors
+      spaceBetween: 24,
+      effect: 'coverflow',
+      coverflowEffect: { rotate: 0, stretch: 0, depth: 240, modifier: 1, slideShadows: false },
+      autoplay: prefersNoMotion ? false : { delay: 4500, disableOnInteraction: false },
+      breakpoints: {
+        768: { slidesPerView: 1.25 },
+        992: { slidesPerView: 1.35 },
+        1200: { slidesPerView: 1.40 }  // keep conservative to avoid overflow
+      },
+      pagination: { el: '.testimonial-swiper-pagination', clickable: true },
+      watchOverflow: true,
+      slidesPerGroup: 1
+    };
+
+    // Decide whether loop is safe: need > max slidesPerView
+    const maxSpv = Math.max(
+      params.slidesPerView || 1,
+      ...Object.values(params.breakpoints || {}).map(bp => bp.slidesPerView || 1)
+    );
+    params.loop = slidesCount > maxSpv;
+
+    // Init
+    const swiper = new Swiper(SELECTOR, params);
+
+    // Optional: if the number of visible slides could change massively (e.g., font-size changes),
+    // you can re-check after a resize and re-init. Commented out by default.
+    // let resizeTimer;
+    // window.addEventListener('resize', () => {
+    //   clearTimeout(resizeTimer);
+    //   resizeTimer = setTimeout(() => {
+    //     swiper.destroy(true, true);
+    //     new Swiper(SELECTOR, params);
+    //   }, 150);
+    // });
+  })();
+</script>
+
 
 
 

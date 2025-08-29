@@ -5,3 +5,147 @@ body {
 .marcellus-font {
     font-family: "Marcellus", serif !important;
 }
+
+/* TESTIMONIALS */
+
+
+/* --- Title --- */
+.testimonials {
+    letter-spacing: .12em;
+    font-size: .9rem;
+}
+
+.section-title {
+    font-size: 1.2rem;
+}
+
+/* --- Containment & layout --- */
+.testimonial-swiper {
+    overflow: hidden;
+    /* hide both axes to avoid scrollbars */
+}
+
+.testimonial-swiper .swiper-wrapper {
+    align-items: center;
+    /* vertical centering of slides */
+}
+
+.testimonial-swiper .swiper-slide {
+    display: flex;
+    /* center slide content */
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Card --- */
+.testimonial-item {
+    width: min(88vw, 900px);
+    /* single, predictable width */
+    margin-inline: auto;
+    padding: 0 1rem;
+    transition: transform .5s ease, opacity .5s ease, filter .5s ease;
+    transform-origin: center;
+}
+
+/* --- Quote --- */
+.testimonial-item blockquote {
+    margin: 0;
+}
+
+.testimonial-item blockquote p {
+    font-weight: 600;
+    line-height: 1.15;
+    color: #6c757d;
+    /* gray-600 */
+    font-size: clamp(26px, 4.2vw, 58px);
+}
+
+/* --- Author --- */
+.testimonial-item .review-title {
+    margin-top: .75rem;
+    letter-spacing: .12em;
+    font-size: .75rem;
+    color: #adb5bd;
+}
+
+/* --- Neighbor (ghost) effect: keep scale modest --- */
+.testimonial-swiper .swiper-slide:not(.swiper-slide-active) .testimonial-item {
+    transform: scale(1.10);
+    /* was 1.22–1.35 -> too big */
+    opacity: .14;
+    filter: blur(.4px) grayscale(1);
+    pointer-events: none;
+    /* avoid accidental text selection */
+}
+
+/* --- Active slide --- */
+.testimonial-swiper .swiper-slide-active .testimonial-item {
+    transform: none;
+    opacity: 1;
+    filter: none;
+}
+
+/* --- Pagination --- */
+.testimonial-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #bfc5c9;
+    opacity: 1;
+    margin: 0 .3rem;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+    background: #6c757d;
+}
+
+/* Mobile: keep things tidy */
+@media (max-width:576px) {
+    .testimonial-item {
+        width: min(92vw, 750px);
+    }
+
+    .testimonial-item blockquote p {
+        font-size: clamp(20px, 6vw, 34px);
+    }
+}
+
+/* NEWSLETTER */
+.newsletter {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    /* py-6 helper */
+}
+
+.newsletter-title {
+    font-weight: 600;
+    letter-spacing: .04em;
+    font-size: clamp(28px, 4vw, 54px);
+}
+
+.newsletter-form {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.newsletter-form .form-control {
+    height: 3.25rem;
+    border: 1px solid #e1e5ea;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: #98a2ad;
+}
+
+.newsletter-form .btn {
+    letter-spacing: .08em;
+}
+
+@media (max-width: 576px) {
+    .newsletter-title {
+        font-size: clamp(24px, 7vw, 36px);
+    }
+}
+
+.footer-logo {
+    width: 150px;
+}

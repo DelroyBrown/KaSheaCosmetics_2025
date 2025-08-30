@@ -114,90 +114,40 @@
     </div>
 
     <div class="row g-4">
-      <!-- Product -->
+      {% for product in featured_products %}
       <div class="col-12 col-sm-6 col-lg-3">
         <div class="h-100">
           <div class="position-relative">
-            <a href="javascript:void(0)" class="d-block ratio ratio-1x1">
-              <img src="{% static 'img/product-images/citrusnotes.png' %}" class="img-fluid w-100 h-100 object-fit-cover"
-                alt="Dark florish onepiece">
+            <a href="{{ product.get_absolute_url }}" class="d-block ratio ratio-1x1">
+              {% if product.imgs and product.imgs.0.image %}
+              <img src="{{ product.imgs.0.image.url }}" class="img-fluid w-100 h-100 object-fit-cover"
+                alt="{{ product.imgs.0.alt_text|default:product.name }}">
+              {% else %}
+              <img src="{% static 'img/placeholder.png' %}" class="img-fluid w-100 h-100 object-fit-cover"
+                alt="{{ product.name }}">
+              {% endif %}
             </a>
             <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2" aria-label="Add to wishlist">
               <i class="bi bi-heart"></i>
             </button>
           </div>
-          <div class="pt-3">
-            <h5 class="text-uppercase fs-6 mb-1">
-              <a href="product-1.html" class="link-dark text-decoration-none">Dark florish onepiece</a>
-            </h5>
-            <span class="text-body-secondary">$95.00</span>
-          </div>
-        </div>
-      </div>
 
-      <!-- Product -->
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="h-100">
-          <div class="position-relative">
-            <a href="javascript:void(0)" class="d-block ratio ratio-1x1">
-              <img src="{% static 'img/product-images/awakenbathsalts.png' %}" class="img-fluid w-100 h-100 object-fit-cover"
-                alt="Baggy Shirt">
-            </a>
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2" aria-label="Add to wishlist">
-              <i class="bi bi-heart"></i>
-            </button>
-          </div>
           <div class="pt-3">
             <h5 class="text-uppercase fs-6 mb-1">
-              <a href="product-2.html" class="link-dark text-decoration-none">Baggy Shirt</a>
+              <a href="{{ product.get_absolute_url }}" class="link-dark text-decoration-none">
+                {{ product.name }}
+              </a>
             </h5>
-            <span class="text-body-secondary">$55.00</span>
+            <span class="text-body-secondary">£{{ product.price }}</span>
           </div>
         </div>
       </div>
-
-      <!-- Product -->
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="h-100">
-          <div class="position-relative">
-            <a href="javascript:void(0)" class="d-block ratio ratio-1x1">
-              <img src="{% static 'img/product-images/unwind.png' %}" class="img-fluid w-100 h-100 object-fit-cover"
-                alt="Cotton off-white shirt">
-            </a>
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2" aria-label="Add to wishlist">
-              <i class="bi bi-heart"></i>
-            </button>
-          </div>
-          <div class="pt-3">
-            <h5 class="text-uppercase fs-6 mb-1">
-              <a href="product-3.html" class="link-dark text-decoration-none">Cotton off-white shirt</a>
-            </h5>
-            <span class="text-body-secondary">$65.00</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product -->
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="h-100">
-          <div class="position-relative">
-            <a href="javascript:void(0)" class="d-block ratio ratio-1x1">
-              <img src="{% static 'img/product-images/naked.png' %}" class="img-fluid w-100 h-100 object-fit-cover"
-                alt="Handmade crop sweater">
-            </a>
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2" aria-label="Add to wishlist">
-              <i class="bi bi-heart"></i>
-            </button>
-          </div>
-          <div class="pt-3">
-            <h5 class="text-uppercase fs-6 mb-1">
-              <a href="product-4.html" class="link-dark text-decoration-none">Handmade crop sweater</a>
-            </h5>
-            <span class="text-body-secondary">$50.00</span>
-          </div>
-        </div>
-      </div>
+      {% empty %}
+      <p>No featured products available right now.</p>
+      {% endfor %}
     </div>
+
+
   </div>
 </section>
 
@@ -288,12 +238,13 @@
       <div class="col-lg-8">
 
         <div class="text-center mb-4">
-          <h2 class="newsletter-title text-uppercase mb-0 fw-light display-5 marcellus-font">Sign Up for Our Newsletter</h2>
+          <h2 class="newsletter-title text-uppercase mb-0 fw-light display-5 marcellus-font">Sign Up for Our Newsletter
+          </h2>
         </div>
 
         <form id="newsletter-form" class="newsletter-form">
           <input type="email" name="email" class="form-control form-control-lg mb-2 rounded-0 shadow-sm"
-                 placeholder="Your Email Address" required>
+            placeholder="Your Email Address" required>
           <button type="submit" class="btn btn-dark w-100 text-uppercase rounded-0 py-3">
             Sign Up
           </button>

@@ -153,3 +153,7 @@ body {
 .footer-logo {
     width: 150px;
 }
+
+.navbar-brand {
+    width: 200px;
+}
